@@ -3,6 +3,6 @@ steps:
   args: ['build', '-t', 'gcr.io/valiant-store-407920/samplecditest:$SHORT_SHA', '.']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/valiant-store-407920/samplecditest:$SHORT_SHA']
-#- name: 'gcr.io/cloud-builders/gcloud'
-#  args: ['beta', 'run', 'deploy', 'integrocloud não funciona', '--region=us-central1', '--platform=managed', '--image=gcr.io/valiant-store-407920/samplecditest:$SHORT_SHA']  
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['beta', 'run', 'deploy', 'samplecditest', '--region=us-central1', '--platform=managed', '--image=gcr.io/valiant-store-407920/samplecditest:$SHORT_SHA']  
 
